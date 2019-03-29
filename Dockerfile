@@ -9,9 +9,10 @@ VOLUME /app
 WORKDIR /app
 
 # Commands to update the image
-RUN npm install -g nodemon
-RUN npm install -g typescript
-RUN npm install -g pm2
+RUN yarn global add nodemon
+RUN yarn global add typescript
+RUN yarn global add pm2
+RUN yarn global add webpack
 
 # Commands when creating a new container
-CMD ["npm","install"]
+CMD ["node","-v"]
