@@ -14,6 +14,7 @@ WORKDIR /app
 RUN yarn global add nodemon \
     typescript \
     pm2 \
+    bower \
     webpack \
     webpack-cli \
     webpack-dev-server
@@ -27,5 +28,5 @@ RUN yarn global add nodemon \
 
 
 # Commands when creating a new container
-USER node
+#USER node
 CMD ["node","-v"]
