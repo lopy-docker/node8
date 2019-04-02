@@ -8,7 +8,12 @@ VOLUME /app
 
 WORKDIR /app
 
+RUN apt-get update \
+    && apt-get install sudo \
+    && apt-get clean \
+    && apt-get autoclean 
 
+RUN echo 'debian  ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Commands to update the image
 RUN yarn global add nodemon \
@@ -20,13 +25,8 @@ RUN yarn global add nodemon \
     webpack-dev-server
 
 
-# RUN yarn global add typescript
-# RUN yarn global add pm2
-# RUN yarn global add webpack
-# RUN yarn global add webpack-cli
-# RUN yarn global add webpack-dev-server
 
 
 # Commands when creating a new container
-#USER node
+USER node
 CMD ["node","-v"]
