@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get clean \
     && apt-get autoclean 
 
-RUN echo 'debian  ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN echo 'node  ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Commands to update the image
 RUN yarn global add nodemon \
