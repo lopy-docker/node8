@@ -19,6 +19,7 @@ RUN echo 'node  ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN yarn global add nodemon \
     typescript \
     pm2 \
+    mocha \
     bower \
     webpack \
     webpack-cli \
